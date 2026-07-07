@@ -9,7 +9,12 @@ path only**.
 
 It is deliberately *only* a provider. It does **no** consumer-side work (no
 dedup, no reorder-buffering, no state projection). That belongs to the separate
-backend this feed exists to be built against.
+**Koora Break backend** this feed exists to be built against:
+[github.com/GamelSadek/koora-break-backend](https://github.com/GamelSadek/koora-break-backend).
+
+> **Two repos, one pipeline.** This mock is the *provider* (`:3001`); the backend is the
+> *consumer* (`:3002`) and serves the demo frontend. **Start this mock first**, then the
+> backend — it connects to `ws://localhost:3001/?matchId=all` out of the box.
 
 ---
 
